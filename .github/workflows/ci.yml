@@ -15,6 +15,19 @@ jobs:
         java-version: ${{ matrix.java }}
         java-package: jdk
         architecture: x64
+    - name: Argon Security Manifest Generation
+    uses: argonsecurity/actions/generate-manifest@v0.1.2
+    with:
+      # Your Github access token
+      github-token: "${{ secrets.GITHUB_TOKEN }}"
+
+      # The argon access token and url to send results to (as provided above)
+      argon-token: "${{ secrets.ARGON_TOKEN }}"
+      argon-url: "${{ secrets.ARGON_MANIFEST_URL }}"
+
+      # OR the path to the root folder of your project. I.e my-repo/my-app
+      artifact-path: "${{env.MY_APP_ROOT}}"
+    
     - name: Run tests
       run: mvn -B package
 
