@@ -35,11 +35,11 @@ jobs:
   uses: argonsecurity/actions/validate-manifest@v0.1.2
   with:
     # The argon access token and url to send results to (as provided above)
-    argon-token: "${{ secrets.ARGON_TOKEN }}"
-    argon-url: "${{ secrets.ARGON_MANIFEST_URL }}"
+    argon-token: "${{secrets.ARGON_TOKEN }}"
+    argon-url: "${{secrets.ARGON_MANIFEST_URL }}"
     
     # Path to Argon Manfiest file (billy generate command result)
-    result-path: "/path/to/manifest.json"
+    result-path: "manifest.json"
     
     
     # Validating artifacts meets your security standards by applying any of argon's checks, i.e.
