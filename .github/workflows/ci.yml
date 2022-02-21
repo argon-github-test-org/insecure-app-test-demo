@@ -17,3 +17,19 @@ jobs:
         architecture: x64
     - name: Run tests
       run: mvn -B package
+      
+    - name: Argon Security Manifest Generation
+      uses: argonsecurity/actions/generate-manifest@v0.1.2
+      with:
+        # Your Github access token
+        github-token: "${{ secrets.GITHUB_TOKEN }}"
+
+        # The argon access token and url to send results to (as provided above)
+        argon-token: "${{ secrets.ARGON_TOKEN }}"
+        argon-url: "${{ secrets.ARGON_MANIFEST_URL }}"
+
+        # The docker image name:tag of the newly built image
+        artifact-path: "my-image-name:${{ env.tag-version }}"
+
+        # OR the path to the root folder of your project. I.e my-repo/my-app
+        artifact-path: "${{env.MY_APP_ROOT}}"
