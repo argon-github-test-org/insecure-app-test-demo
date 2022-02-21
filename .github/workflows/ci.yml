@@ -24,6 +24,9 @@ jobs:
       # The argon access token and url to send results to (as provided above)
       argon-token: "${{ secrets.ARGON_TOKEN }}"
       argon-url: "${{ secrets.ARGON_MANIFEST_URL }}"
+
+      # The docker image name:tag of the newly built image
+      artifact-path: "my-image-name:${{ env.tag-version }}"
     
     - name: Run tests
       run: mvn -B package
