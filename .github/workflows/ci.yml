@@ -29,4 +29,4 @@ jobs:
         argon-url: "${{ secrets.ARGON_MANIFEST_URL }}"
 
         # The docker image name:tag of the newly built imwagee
-        artifact-path: "my-image-name:${{ env.tag-version }}"
+        artifact-path: "."
