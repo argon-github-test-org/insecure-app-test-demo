@@ -30,33 +30,3 @@ jobs:
 
       # The docker image name:tag of the newly built image
       artifact-path: "my-image-name:${{ env.tag-version }}"
-   
-   
-    - name: Argon Security Manifest Validation
-  uses: argonsecurity/actions/validate-manifest@v0.1.2
-  with:
-    # The argon access token and url to send results to (as provided above)
-    argon-token: "${{secrets.ARGON_TOKEN }}"
-    argon-url: "${{secrets.ARGON_MANIFEST_URL }}"
-    
-    # Path to Argon Manfiest file (billy generate command result)
-    result-path: "manifest.json"
-    
-    
-    # Validating artifacts meets your security standards by applying any of argon's checks, i.e.
-    #
-    # Scanned for IaC misconfigurations
-    # iac: true
-    #
-    # Approved by 2 team members prior being merged into code-base
-    # minimum-reviewers: true
-    #
-    branch-protection: true
-    iac: true
-    integrity: true
-    mfa: true
-    minimum-reviewers: true
-    pull-request: true
-    sast: true
-    secrets: true
-
