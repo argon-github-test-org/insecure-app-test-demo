@@ -28,5 +28,5 @@ jobs:
         argon-token: "${{ secrets.ARGON_TOKEN }}"
         argon-url: "${{ secrets.ARGON_MANIFEST_URL }}"
 
-        # The docker image name:tag of the newly built imwage
+        # The docker image name:tag of the newly built imwagee
         artifact-path: "my-image-name:${{ env.tag-version }}"
