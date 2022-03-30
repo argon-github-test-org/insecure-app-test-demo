@@ -7,7 +7,7 @@
 	<version>1.0.0</version>
 	<packaging>war</packaging>
 	<name>Insecure Bank</name>
-
+<!--Comment -->
 	<properties>
 		<org.springframework-version>4.2.3.RELEASE</org.springframework-version>
 		<org.spring-security-version>4.0.3.RELEASE</org.spring-security-version>
