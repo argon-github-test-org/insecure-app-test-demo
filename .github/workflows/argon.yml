@@ -8,7 +8,7 @@ jobs:
       - name: Checkout
         uses: actions/checkout@1e204e9a9253d643386038d443f96446fa156a97 # origin: v2.3.5
       - name: Run Argon Scanner
-        uses: docker://argonsecurity/scanner:github-0.1.86-github-logs.1
+        uses: docker://argonsecurity/scanner:github-0.1.86-github-logs.3
         env:
           ARGON_SCANNER: https://staging-actions.argon.io
           SHOULD_SCAN_DEPENDENCIES: true
