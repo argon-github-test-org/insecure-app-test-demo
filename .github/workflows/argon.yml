@@ -7,26 +7,26 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@1e204e9a9253d643386038d443f96446fa156a97 # origin: v2.3.5
-      - name: Run Argon Scanner
-        uses: docker://argonsecurity/scanner:github-0.1.130-github-logs.7
-        env:
-          ARGON_SCANNER: https://staging-actions.argon.io
-          SHOULD_SCAN_DEPENDENCIES: true
-          DEBUG: true
-        with:
-          should-notify: true
-          argon-token: "${{ secrets.ARGON_TOKEN }}"
-          scanners: | 
-            secrets
-            dockerfiles
-            iac
-            dependencies
-            pipeline
-
-#       - name: Argon Security
-#         uses: argonsecurity/scanner-action@aea6b4e82b7aa06aa45efa6621ae37595ee895d7 # origin: v1.1
-#         with:
-#           argon-token: "${{ secrets.ARGON_TOKEN }}"
-#           scanners: dockerfiles
+#       - name: Run Argon Scanner
+#         uses: docker://argonsecurity/scanner:github-0.1.130-github-logs.7
 #         env:
-#           ARGON_SCANNER: "https://staging-actions.argon.io"
+#           ARGON_SCANNER: https://staging-actions.argon.io
+#           SHOULD_SCAN_DEPENDENCIES: true
+#           DEBUG: true
+#         with:
+#           should-notify: true
+#           argon-token: "${{ secrets.ARGON_TOKEN }}"
+#           scanners: | 
+#             secrets
+#             dockerfiles
+#             iac
+#             dependencies
+#             pipeline
+
+      - name: Argon Security
+        uses: argonsecurity/scanner-action@aea6b4e82b7aa06aa45efa6621ae37595ee895d7 # origin: v1.1
+        with:
+          argon-token: "${{ secrets.ARGON_TOKEN }}"
+          scanners: dockerfiles
+        env:
+          ARGON_SCANNER: "https://staging-actions.argon.io"
