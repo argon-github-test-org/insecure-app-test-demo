@@ -11,5 +11,3 @@ jobs:
         uses: argonsecurity/scanner-action@aea6b4e82b7aa06aa45efa6621ae37595ee895d7 # origin: v1.1
         with:
           argon-token: "${{ secrets.ARGON_TOKEN }}"
-        env:
-          ARGON_SCANNER: "https://staging-actions.argon.io"
