@@ -35,3 +35,4 @@ jobs:
             dependencies
         env:
           ARGON_SCANNER: "https://staging-actions.argon.io"
+          DEBUG: true
