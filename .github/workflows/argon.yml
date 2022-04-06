@@ -12,6 +12,7 @@ jobs:
         env:
           ARGON_SCANNER: https://staging-actions.argon.io
           SHOULD_SCAN_DEPENDENCIES: true
+          DEBUG: true
         with:
           should-notify: true
           argon-token: "${{ secrets.ARGON_TOKEN }}"
