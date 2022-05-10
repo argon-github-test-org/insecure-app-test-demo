@@ -18,7 +18,7 @@ jobs:
           scan-type: 'fs'
           hide-progress: false
           format: 'table'
-          security-checks: 'vuln,config,secret'
+          security-checks: 'vuln,config,secrets'
         env:
           AQUA_KEY: ${{ secrets.AQUA_KEY }}
           AQUA_SECRET: ${{ secrets.AQUA_SECRET }}
