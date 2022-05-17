@@ -19,7 +19,7 @@ jobs:
           hide-progress: false
           format: 'table'
         env:
-          AQUA_KEY: ${{ secrets.AQUA_KEY_DEV }}
-          AQUA_SECRET: ${{ secrets.AQUA_SECRET_DEV }}
+          AQUA_KEY_DEV: ${{ secrets.AQUA_KEY_DEV }}
+          AQUA_SECRET_DEV: ${{ secrets.AQUA_SECRET_DEV }}
           TRIVY_RUN_AS_PLUGIN: 'aqua'
           TRIGGERED_BY: 'AQUA_TRIGGER_PLACEHOLDER'
