@@ -23,10 +23,10 @@ ADD start.sh /usr/local/tomcat/
 ADD target/insecure-bank.war /usr/local/tomcat/webapps
 
 # Copy the license file
-ADD license.hdiv /usr/local/tomcat/hdiv/
+#ADD license.hdiv /usr/local/tomcat/hdiv/
 
 # Copy the agent jar
-ADD hdiv-ee-agent.jar /usr/local/tomcat/hdiv/
+#ADD hdiv-ee-agent.jar /usr/local/tomcat/hdiv/
 
 # Run Tomcat and enjoy!
 CMD export JAVA_OPTS="-javaagent:hdiv/hdiv-ee-agent.jar \
